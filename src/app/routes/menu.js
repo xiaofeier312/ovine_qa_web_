@@ -20,6 +20,11 @@ export const menuRoutes = {
       sideVisible: false, // 不会显示在侧边栏
     },
     {
+      label: '创建订单',
+      icon: 'fa fa-paint-brush',
+      nodePath: 'order',
+    },
+    {
       label: '页面编辑',
       icon: 'fa fa-coffee',
       nodePath: 'start',
