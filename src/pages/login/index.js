@@ -2,10 +2,18 @@
  * 登录页面
  */
 
-import { publish } from '@core/utils/message'
-import { setStore, clearStore } from '@core/utils/store'
+import {
+  publish
+} from '@core/utils/message'
+import {
+  setStore,
+  clearStore
+} from '@core/utils/store'
 
-import { storeKeys, msgKeys } from '~/app/constants'
+import {
+  storeKeys,
+  msgKeys
+} from '~/app/constants'
 
 import authCode from './code'
 import loginCss from './styled'
@@ -16,8 +24,7 @@ export const schema = {
   body: {
     type: 'wrapper',
     className: 'login-wrapper b r-2x',
-    body: [
-      {
+    body: [{
         type: 'html',
         html: `
           <h6 class="login-title">
@@ -35,11 +42,16 @@ export const schema = {
     apis: {
       login: {
         url: 'POST ovapi/user/login',
+        method: 'POST',
         onError: () => {
           publish(msgKeys.updateAuthLoginCode, '')
         },
         onSuccess: (source) => {
-          const { code, msg, data } = source
+          const {
+            code,
+            msg,
+            data
+          } = source
           if (code === 0) {
             setStore(storeKeys.auth, data)
             source.msg = '您已登录登录本系统'
@@ -65,8 +77,7 @@ export const schema = {
         autoFocus: false,
         api: '$preset.apis.login',
         redirect: '/',
-        controls: [
-          {
+        controls: [{
             type: 'text',
             name: 'username',
             required: true,
@@ -87,8 +98,7 @@ export const schema = {
             label: '验证码',
             required: true,
             gap: 'sm',
-            controls: [
-              {
+            controls: [{
                 type: 'text',
                 name: 'code',
                 required: true,
@@ -110,8 +120,7 @@ export const schema = {
             label: ' ',
             gap: 'sm',
             inputClassName: 'justify-content-between',
-            controls: [
-              {
+            controls: [{
                 type: 'checkbox',
                 name: 'remember',
                 label: '记住登录',

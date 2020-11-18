@@ -8,7 +8,7 @@ export const schema = {
     "messages": {
       "validateFailed": "请仔细检查表单规则，部分表单项没通过验证"
     },
-    "api": "/order/create_order",
+    "api": "$.preset.apis.create",
     "actions": [
 
     ],
@@ -79,7 +79,7 @@ export const schema = {
 
       {
         "type": "service",
-        "api": "/order/log",
+        "api": "GET order/log",
         "interval": 150000,
         "body": [{
           "type": "table",

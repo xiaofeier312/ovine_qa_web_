@@ -17,7 +17,8 @@ export const env = {
   localhost: {
     disableLimit: false,
     domains: {
-      api: 'https://ovine.igroupes.com',
+      // api: 'https://ovine.igroupes.com',
+      api: 'http://localhost:7050',
     },
     // 日志配置
     logger: {

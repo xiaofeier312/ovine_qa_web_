@@ -4,15 +4,30 @@
  * 以下均为 demo 应用实现，具体请根据自己需求编写代码
  */
 
-import { toast } from 'amis'
+import {
+  toast
+} from 'amis'
 
-import { app } from '@core/app'
-import { routeLimitKey } from '@core/constants'
-import { setAppLimits } from '@core/routes/limit/exports'
-import { clearStore, getStore } from '@core/utils/store'
+import {
+  app
+} from '@core/app'
+import {
+  routeLimitKey
+} from '@core/constants'
+import {
+  setAppLimits
+} from '@core/routes/limit/exports'
+import {
+  clearStore,
+  getStore
+} from '@core/utils/store'
 
-import { apis } from './common/apis'
-import { storeKeys } from './constants'
+import {
+  apis
+} from './common/apis'
+import {
+  storeKeys
+} from './constants'
 
 let userInfo = {}
 
@@ -28,6 +43,7 @@ function checkAppLimitStr(limitStr) {
    * 1. limitStr 不存在
    * 2. limitStr 不是根权限标示符 并且 limitStr 中不存在 路由权限 （即没有一个展示路由时）。
    */
+
   if (
     !limitStr ||
     (limitStr !== app.constants.rootLimitFlag && limitStr.indexOf(routeLimitKey) === -1)
@@ -51,7 +67,9 @@ export async function onAuth() {
   // demo 项目用于统计的接口，可以自行删除
   app.request({
     url: apis.pageStat.url,
-    data: { code: 100001 },
+    data: {
+      code: 100001
+    },
   })
   try {
     await fetchUserInfo()
@@ -67,6 +85,8 @@ export async function onAuth() {
 export async function fetchUserInfo() {
   return app.request(apis.getSelfInfo).then((source) => {
     userInfo = source.data.data
+    console.log('---source.data.data:')
+    console.log(source.data.data)
     return userInfo
   })
 }
@@ -81,7 +101,9 @@ export function getUserInfo(callback) {
 
 // 退出登录
 export function logout(option) {
-  const { tip = '您已经成功退出登录', useApi = false } = option || {}
+  const {
+    tip = '您已经成功退出登录', useApi = false
+  } = option || {}
 
   app.routerHistory.push('/login')
   toast.info(tip, '系统提示')
