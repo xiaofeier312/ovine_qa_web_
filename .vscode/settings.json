@@ -7,5 +7,10 @@
   },
   "editor.foldingStrategy": "indentation",
   "editor.formatOnSave": true,
-  "cSpell.ignoreWords": ["ovapi", "immer", "tsbuildinfo"]
+  "cSpell.ignoreWords": [
+    "ovapi",
+    "immer",
+    "tsbuildinfo"
+  ],
+  "editor.fontSize": 14
 }

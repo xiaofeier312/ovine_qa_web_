@@ -10,14 +10,28 @@ export const menuRoutes = {
   nodePath: '/',
   limitLabel: '侧边栏目录',
   label: '',
-  children: [
-    {
+  children: [{
       path: '/',
       label: 'Dashboard',
       nodePath: 'dashboard',
       exact: true,
       pathToComponent: 'dashboard',
       sideVisible: false, // 不会显示在侧边栏
+    },
+    {
+      label: '接口自动化',
+      icon: 'fa fa-paint-brush',
+      nodePath: 'pycases',
+      children: [{
+          label: '用例列表',
+          nodePath: 'cases',
+        },
+        {
+          label: '用例结果',
+          nodePath: 'iteration',
+        }
+
+      ]
     },
     {
       label: '创建订单',
@@ -33,8 +47,7 @@ export const menuRoutes = {
       label: 'DEMO应用',
       icon: 'fa fa-paint-brush',
       nodePath: 'application',
-      children: [
-        {
+      children: [{
           label: '热更新管理',
           nodePath: 'hot', // 对应 src/pages/application/hot
         },
@@ -48,8 +61,7 @@ export const menuRoutes = {
       label: '系统管理',
       icon: 'fa fa-wrench',
       nodePath: 'system',
-      children: [
-        {
+      children: [{
           label: '管理员用户',
           nodePath: 'user_list', // 对应 src/pages/system/user_list
         },
