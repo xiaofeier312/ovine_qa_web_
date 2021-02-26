@@ -30,10 +30,6 @@ export const menuRoutes = {
           label: '用例结果',
           nodePath: 'iteration',
         },
-        {
-          label: '结果html',
-          nodePath: 'singleresult'
-        },
 
       ]
     },

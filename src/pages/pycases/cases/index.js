@@ -21,12 +21,26 @@ export const schema = {
         "label": "项目名"
       },
       {
+        "name": "chinese_name",
+        "label": "备注"
+      },
+      {
         "name": "module_name",
         "label": "模块名"
       },
       {
         "name": "func_name",
+        // "width": "50",
         "label": "用例名"
+      },
+      {
+        "name": "priority",
+        "label": "等级",
+        "type": "mapping",
+        "map": {
+          "0": "<b>Smoke</b>",
+          "1": "p1",
+        }
       },
       {
         "name": "remark",
