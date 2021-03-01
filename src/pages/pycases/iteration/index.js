@@ -3,8 +3,11 @@ export const schema = {
   "body": {
     "type": "crud",
     "api": "$preset.apis.tasks",
+    "defaultParams": {
+      "perPage": 20
+    },
     "filter": {
-      "title": "条件搜索",
+      "title": "输入用例路径搜索",
       "controls": [{
         "type": "text",
         "name": "keywords",
@@ -61,23 +64,27 @@ export const schema = {
         "type": "operation",
         "label": "操作",
         "buttons": [{
-          "label": "查看报告",
-          "type": "button",
-          "level": "info",
-          "actionType": "url",
-          "url": "http://localhost:8081/case/report?file=$file_name",
-          "blank": true,
+            "label": "查看报告",
+            "type": "button",
+            "level": "info",
+            "actionType": "url",
+            // "url": "/case/report?file=$file_name",
+            "url": "http://localhost:8081/case/report?file=$file_name",
+            "blank": true,
 
-          // "actionType": "ajax",
-          // "level": "info",
-          // "api": "$preset.apis.report"
-        }, {
-          "label": "重新运行",
-          "type": "button",
-          "level": "info",
-          "actionType": "url",
-          "url": "",
-        }]
+            // "actionType": "ajax",
+            // "level": "info",
+            // "api": "$preset.apis.report"
+          },
+          // {
+          //   // 以后再做，因为重新运行涉及到用例新老版本，不容易向用户解释清楚
+          //   "label": "重新运行",
+          //   "type": "button",
+          //   "level": "info",
+          //   "actionType": "url",
+          //   "url": "",
+          // }
+        ]
       }
     ]
   }

@@ -3,6 +3,9 @@ export const schema = {
   "body": {
     "type": "crud",
     "api": "$preset.apis.list_case",
+    "defaultParams": {
+      "perPage": 20
+    },
     "filter": {
       "title": "条件搜索",
       "controls": [{
