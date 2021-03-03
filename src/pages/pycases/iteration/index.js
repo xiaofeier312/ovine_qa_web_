@@ -14,6 +14,32 @@ export const schema = {
         "placeholder": "请输入项目名"
       }]
     },
+    "headerToolbar": [{
+      "type": "action",
+      "actionType": "dialog",
+      "label": "手动触发JOB",
+      "dialog": {
+        "title": "动触发JOB",
+        "type": "panel",
+        "body": "1. 提交代码后，server自动更新用例<br/>2. 每天凌晨JOB自动运行所有用例",
+        "actions": [{
+            "type": "button",
+            "label": "手动更新最新用例",
+            "actionType": "url",
+            "url": "http://localhost:8081/case/gentree"
+
+          },
+          {
+            "type": "button",
+            "label": "手动执行定时任务",
+            "actionType": "url",
+            "url": "http://localhost:8081/case/runmodulecase/0"
+          }
+        ]
+
+
+      }
+    }],
     "syncLocation": false,
     "columns": [{
         "name": "id",
