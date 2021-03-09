@@ -39,26 +39,26 @@ export const layout = {
       {
         type: 'item-search-menu', // 搜索侧边栏
       },
-      {
-        type: 'head-item', // 头部工具项
-        align: 'right',
-        body: {
-          type: 'html',
-          html: `
-          <a
-            target="blank"
-            href="https://github.com/CareyToboo/ovine"
-            data-tooltip="Github 源码"
-            data-position="bottom"
-          >
-            <img
-              alt="github starts"
-              src="https://img.shields.io/github/stars/CareyToboo/ovine?style=social"
-            />
-          </a>
-        `,
-        },
-      },
+      // {
+      //   type: 'head-item', // 头部工具项
+      //   align: 'right',
+      //   body: {
+      //     type: 'html',
+      //     html: `
+      //     <a
+      //       target="blank"
+      //       href="https://github.com/CareyToboo/ovine"
+      //       data-tooltip="Github 源码"
+      //       data-position="bottom"
+      //     >
+      //       <img
+      //         alt="github starts"
+      //         src="https://img.shields.io/github/stars/CareyToboo/ovine?style=social"
+      //       />
+      //     </a>
+      //   `,
+      //   },
+      // },
       itemUserSchema, // 用户头像展示扩展
       {
         type: 'item-setting', // 系统设置
