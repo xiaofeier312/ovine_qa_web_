@@ -3,7 +3,9 @@
  */
 
 import routes from '../routes/index'
-import { itemUserSchema } from './item_user'
+import {
+  itemUserSchema
+} from './item_user'
 
 /**
  * 目前布局这块没有权限控制逻辑
@@ -18,15 +20,14 @@ export const layout = {
     brand: {
       // 公司品牌
       logo: '/static/images/logo_line_white.png',
-      title: 'Ovine',
+      title: 'Sunlands',
       link: {
         title: 'dashboard',
         href: '/',
       },
     },
     // 头部 工具项
-    items: [
-      {
+    items: [{
         type: 'item-dev-code', // 查看页面JSON， release 环境不会显示。
       },
       {
