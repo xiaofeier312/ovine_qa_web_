@@ -17,6 +17,7 @@ export const schema = {
     "headerToolbar": [{
       "type": "action",
       "actionType": "dialog",
+      "level": "info",
       "label": "手动触发JOB",
       "dialog": {
         "title": "动触发JOB",
@@ -33,6 +34,7 @@ export const schema = {
           {
             "type": "button",
             "label": "手动执行定时任务",
+            "level": "info",
             "actionType": "url",
             "url": "http://localhost:8081/case/runmodulecase/0"
           }
