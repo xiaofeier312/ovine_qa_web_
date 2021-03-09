@@ -21,10 +21,11 @@ export const schema = {
       "dialog": {
         "title": "动触发JOB",
         "type": "panel",
-        "body": "1. 提交代码后，server自动更新用例<br/>2. 每天凌晨JOB自动运行所有用例",
+        "body": "1. 提交代码后，server自动更新用例，如果没更新用例，可手动触发<br/>2. 每天凌晨JOB自动运行所有用例",
         "actions": [{
             "type": "button",
             "label": "手动更新最新用例",
+            "level": "info",
             "actionType": "url",
             "url": "http://localhost:8081/case/gentree"
 
