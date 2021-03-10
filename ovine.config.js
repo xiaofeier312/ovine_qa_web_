@@ -13,13 +13,13 @@ module.exports = {
   //   }
   // }  
   devServerProxy: {
-    '/ovapi': {
-      target: 'http://localhost:8081/',
-      changeOrigin: true,
-      pathRewrite: {
-        '^/ovapi': '/',
-      }
-    },
+    // '/ovapi': {
+    //   target: 'http://localhost:8081/',
+    //   changeOrigin: true,
+    //   pathRewrite: {
+    //     '^/ovapi': '/',
+    //   }
+    // },
     '/pytest': {
       target: 'http://localhost:8081/',
       changeOrigin: true,
