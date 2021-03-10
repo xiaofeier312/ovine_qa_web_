@@ -20,7 +20,7 @@ export const schema = {
       "level": "info",
       "label": "手动触发JOB",
       "dialog": {
-        "title": "动触发JOB",
+        "title": "手动触发JOB",
         "type": "panel",
         "body": "1. 提交代码后，server自动更新用例，如果没更新用例，可手动触发<br/>2. 每天凌晨JOB自动运行所有用例",
         "actions": [{
