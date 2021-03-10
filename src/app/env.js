@@ -18,9 +18,9 @@ export const env = {
     disableLimit: false,
     domains: {
       // api: 'https://ovine.igroupes.com',
-      // api: 'http://172.16.33.129:7050/',
+      api: 'http://172.16.33.129:7050/',
       // api: 'http://0.0.0.0:7050',
-      api: 'http://localhost:7050',
+      // api: 'http://localhost:7050',
     },
     // 日志配置
     logger: {
