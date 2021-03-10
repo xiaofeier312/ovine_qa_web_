@@ -4,7 +4,6 @@
   "description": "your awesome project.",
   "private": true,
   "scripts": {
-    "start": "ovine dev --mock",
     "start": "ovine dev --host=0.0.0.0",
     "dev": "ovine dev --no-dll --mock",
     "build": "yarn eslint && ovine build",
